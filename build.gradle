@@ -54,3 +54,10 @@ test {
         includeEngines 'spek2'
     }
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
