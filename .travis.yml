@@ -6,9 +6,11 @@ cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+install: 
+  - pip install codecov
 script:
   - ./gradlew build
   - ./gradlew test
   - ./gradlew jacocoTestReport
 after_success: 
-  - bash <(curl -s https://codecov.io/bash)
+  - codecov
